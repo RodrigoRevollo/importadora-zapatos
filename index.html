@@ -6,6 +6,7 @@
     <title>Importadora de Calzado | Login Profesional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -21,14 +22,14 @@
                     <p class="text-gray-500 mt-2">Ingresa a tu panel de gestión de inventario</p>
                 </div>
 
-                <form action="#" class="space-y-6">
+                <form id="loginForm" class="space-y-6">
                     <div>
                         <label class="block text-sm font-semibold text-gray-700">Correo Electrónico</label>
                         <div class="mt-1 relative">
                             <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                                 <i class="fa-solid fa-envelope"></i>
                             </span>
-                            <input type="email" required 
+                            <input type="email" id="email" required 
                                 class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" 
                                 placeholder="ejemplo@importadora.com">
                         </div>
@@ -40,7 +41,7 @@
                             <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
                                 <i class="fa-solid fa-lock"></i>
                             </span>
-                            <input type="password" required 
+                            <input type="password" id="password" required 
                                 class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" 
                                 placeholder="••••••••">
                         </div>
@@ -89,6 +90,35 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Validación simple (puedes cambiar los datos aquí)
+            if (email === "admin@importadora.com" && password === "123456") {
+                Swal.fire({
+                    title: '¡Acceso Correcto!',
+                    text: 'Bienvenido al sistema de Bolivia Price Shoes',
+                    icon: 'success',
+                    confirmButtonColor: '#2563eb'
+                }).then(() => {
+                    // Aquí podrías redireccionar a otra página:
+                    // window.location.href = "dashboard.html";
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error de acceso',
+                    text: 'Usuario o contraseña incorrectos. Intenta de nuevo.',
+                    icon: 'error',
+                    confirmButtonColor: '#2563eb'
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
