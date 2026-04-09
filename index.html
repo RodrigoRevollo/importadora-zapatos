@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importadora de Calzado | Login Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex h-screen w-full">
+        
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-center bg-white px-8 lg:px-24">
+            
+            <div class="max-w-md w-full">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+                        BIENVENIDO A <span class="text-blue-600">SHOES-IMPORT</span>
+                    </h2>
+                    <p class="text-gray-500 mt-2">Ingresa a tu panel de gestión de inventario</p>
+                </div>
+
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700">Correo Electrónico</label>
+                        <div class="mt-1 relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <input type="email" required 
+                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" 
+                                placeholder="ejemplo@importadora.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700">Contraseña</label>
+                        <div class="mt-1 relative">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" required 
+                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" 
+                                placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded">
+                            <label class="ml-2 block text-sm text-gray-600">Recordarme</label>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-500">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" 
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-md text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300">
+                        INICIAR SESIÓN
+                    </button>
+                </form>
+
+                <div class="mt-8 text-center text-sm text-gray-500">
+                    ¿No tienes cuenta? <a href="#" class="text-blue-600 font-bold hover:underline">Contacta a soporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:flex lg:w-1/2 bg-blue-600 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="Calzado de alta calidad" 
+                 class="absolute inset-0 h-full w-full object-cover mix-blend-overlay opacity-80">
+            
+            <div class="relative z-10 flex flex-col justify-center px-20 text-white">
+                <h1 class="text-5xl font-black leading-tight">LA MEJOR CALIDAD <br> A CADA PASO.</h1>
+                <p class="mt-6 text-lg text-blue-100 max-w-md">
+                    Gestiona las importaciones de las marcas más exclusivas del mundo en un solo lugar. 
+                    Rapidez, control y estilo.
+                </p>
+                <div class="mt-10">
+                    <span class="inline-block px-4 py-1 border-2 border-white rounded-full text-sm font-bold tracking-widest uppercase">
+                        Season 2026
+                    </span>
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 right-0 p-12 opacity-20">
+                <i class="fa-solid fa-shoe-prints text-[200px] -rotate-45"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
